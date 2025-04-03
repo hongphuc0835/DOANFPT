@@ -1,0 +1,62 @@
+/* Style cho các accordion */
+.accordion-style {
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  transition: all 0.3s ease;
+}
+
+.accordion-style:hover {
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Style cho tiêu đề Accordion (Thông tin cần lưu ý) */
+.accordion-title {
+  font-weight: bold;
+  font-size: 18px; /* Tăng kích thước chữ */
+  color: #4caf50; /* Màu sắc nổi bật */
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Thêm hiệu ứng bóng đổ */
+  padding-left: 10px;
+  padding-right: 10px;
+  transition: color 0.3s ease;
+}
+
+.accordion-title:hover {
+  color: #388e3c; /* Thay đổi màu khi hover */
+}
+
+/* Style cho icon ở đầu accordion */
+.accordion-icon {
+  margin-right: 10px;
+  color: #4caf50;
+}
+
+
+/* Style cho chi tiết accordion (Đây là chi tiết về thông tin cần lưu ý) */
+.accordion-details {
+  background-color: #f5f5f5;
+  font-size: 14px; /* Giảm kích thước chữ */
+  color: #666;
+  font-style: italic; /* Nghiêng chữ */
+  line-height: 1.6;
+  padding: 15px; /* Thêm padding cho phần chi tiết */
+  white-space: pre-line;
+}
+
+/* Hiệu ứng cho mỗi accordion khi mở rộng */
+.MuiAccordionSummary-root.Mui-expanded {
+  background-color: #e8f5e9;
+}
+
+/* Cải thiện sự hiện thị của các icon */
+.MuiIconButton-root {
+  transition: transform 0.3s ease;
+}
+
+.MuiIconButton-root:hover {
+  transform: scale(1.1);
+}

@@ -1,0 +1,608 @@
+/* Phần intro */
+.intro-section {
+  background: url('https://bizweb.dktcdn.net/100/505/645/products/sp2.jpg?v=1703065085930') no-repeat center center;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  margin-bottom: 50px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  animation: backgroundAnimation 1s infinite alternate;
+}
+
+@keyframes backgroundAnimation {
+  0% {
+    background-position: center;
+  }
+  100% {
+    background-position: left center;
+  }
+}
+
+.intro-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0.6;
+}
+
+.intro-section h1,
+.intro-section p {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+.intro-section h1 {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  animation-delay: 0.5s;
+}
+
+.intro-section p {
+  font-size: 20px;
+  max-width: 800px;
+  margin: 20px auto;
+  line-height: 1.6;
+  animation-delay: 1s;
+}
+
+/* CSS cho animation chữ */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Reset margin, padding và border cho tất cả phần tử */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.meet-us {
+  background-color: #eef8fa;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.meet-us-title {
+  font-size: 40px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 20px;
+  animation: fadeInUp 1s ease-out;
+}
+
+.meet-us-description {
+  font-size: 20px;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  line-height: 1.8;
+  animation: fadeInUp 1.5s ease-out;
+}
+.us {
+  display: flex;
+  gap: 110px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.us .file {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.us .file .name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.us .file .role {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.us .file img {
+  width: 170px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: lightgray;
+
+}
+/* aboutlist.css */
+.values-section {
+  padding: 80px 20px;
+  text-align: center;
+  color: #212529;
+  position: relative;
+}
+  .values-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    filter: blur(3px); /* Làm mờ ảnh nền */
+    z-index: -1; /* Đảm bảo ảnh nền không che khuất nội dung */
+    background-color: #eef8fa;
+  }
+
+
+.values-description {
+  font-size: 20px;
+  color: #212529;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+  animation: fadeInUp 1.5s ease-out;
+}
+
+.values-list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.value-item {
+  background-color: #ffffff;
+  width: 300px;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.value-name {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.value-description {
+  font-size: 16px;
+  color: #777;
+}
+
+/* Thêm kiểu cho biểu tượng */
+.value-icon {
+  font-size: 40px;
+  color: #00acc1;
+  margin-bottom: 20px;
+  animation: bounceIn 1s ease-out;
+}
+
+/* Animation cho Mission & Values */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation cho Biểu tượng */
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+/* Partner Strategy Section */
+.partner-strategy-section {
+  background-color: #ffffff;
+  padding: 50px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.partner-strategy {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.partner-strategy-images {
+  display: flex;
+  justify-content: space-between;
+}
+
+.partner-strategy-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.partner-strategy-image:hover {
+  transform: scale(1.1);
+}
+
+.partner-strategy-text {
+  max-width: 500px;
+}
+
+.partner-strategy-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #2c3e50;
+}
+
+.partner-strategy-description {
+  font-size: 1.1rem;
+  text-align: center;
+  color: #7f8c8d;
+  line-height: 1.5;
+}
+
+/* General section styling */
+#achievements {
+  background-color: #eef8fa;
+  padding: 60px 0;
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  margin-top: -50px;
+}
+
+.containertt {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 23px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 60px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 0;
+  animation: slideInFromLeft 1s 0.3s forwards;
+}
+
+/* Achievements Grid */
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  align-items: center;
+  opacity: 0;
+  animation: fadeIn 1.5s 0.5s forwards;
+}
+
+.achievement-item {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  transform: translateY(0);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 350px;
+  height: 400px; /* Đảm bảo kích thước ô cố định */
+  opacity: 0;
+  animation: scaleIn 1s forwards;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.achievement-item:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.achievement-item:nth-child(1) {
+  animation-delay: 0.4s;
+}
+.achievement-item:nth-child(2) {
+  animation-delay: 0.6s;
+}
+.achievement-item:nth-child(3) {
+  animation-delay: 0.8s;
+}
+.achievement-item:nth-child(4) {
+  animation-delay: 1s;
+}
+.achievement-item:nth-child(5) {
+  animation-delay: 1.2s;
+}
+
+/* Text & Image positioning */
+.achievement-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  z-index: 10;
+  padding: 0 20px;
+  width: 80%;
+}
+
+.achievement-text h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #730323;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+  margin-bottom: 15px;
+}
+
+.achievement-text p {
+  font-size: 18px;
+  color: #fc8d08;
+  line-height: 1.5;
+  margin-bottom: 25px;
+  opacity: 0;
+  animation: fadeInText 1.2s 1s forwards;
+}
+
+.achievement-image {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.achievement-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.achievement-item:hover .achievement-image img {
+  transform: scale(1.1);
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 32px;
+  }
+
+  .achievement-item {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .achievement-text h3 {
+    font-size: 22px;
+  }
+
+  .achievement-text p {
+    font-size: 16px;
+  }
+}
+/* General section styling */
+.strategic-partners-section {
+  position: relative;
+  padding: 80px 0;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  opacity: 0;
+  animation: fadeInSection 1s forwards;
+}
+
+.strategic-partners-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  filter: blur(8px); /* Làm mờ ảnh nền */
+  z-index: -1; /* Đảm bảo ảnh nền không che khuất nội dung */
+  background-color: #eef8fa;
+}
+
+/* Container for the content */
+.strategic-partners-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  flex-wrap: wrap; /* To allow wrapping for smaller screens */
+}
+
+/* Text styling */
+.strategic-partners-text {
+  flex: 1;
+  padding-right: 40px;
+}
+
+.strategic-partners-heading {
+  font-size: 42px;
+  font-weight: 700;
+  color: #2a2a2a;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.strategic-partners-description {
+  font-size: 18px;
+  color: #757575;
+  line-height: 1.6;
+  max-width: 600px;
+  font-style: italic;
+}
+
+/* Image styling */
+.strategic-partners-images {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Hai ảnh trong một hàng */
+  grid-gap: 20px; /* Khoảng cách giữa các ảnh */
+  justify-items: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.strategic-partner-image {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+/* Keyframes for animations */
+@keyframes fadeInSection {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomInImage {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .strategic-partners-heading {
+    font-size: 36px;
+  }
+
+  .strategic-partners-description {
+    font-size: 16px;
+  }
+
+  .strategic-partners-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .strategic-partners-text {
+    text-align: center;
+    padding-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .strategic-partners-images {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .strategic-partner-image {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .strategic-partners-heading {
+    font-size: 30px;
+  }
+
+  .strategic-partners-description {
+    font-size: 14px;
+  }
+
+  .strategic-partners-text {
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .strategic-partners-images {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .strategic-partner-image {
+    width: 80px;
+    height: 80px;
+  }
+}

@@ -1,0 +1,17 @@
+.previous-link__arrow {
+    display: inline-block;
+    vertical-align: middle;
+    font-style: normal;
+    transition: all .2s ease-out;
+    -webkit-transition: all .2s ease-out;
+    padding: 14px;
+}
+.previous-link__content {
+    vertical-align: middle;
+    font-size: 15px;
+}
+a, .icon-print {
+    color: #2a9dcc;
+    text-decoration: none;
+    cursor: pointer;
+}

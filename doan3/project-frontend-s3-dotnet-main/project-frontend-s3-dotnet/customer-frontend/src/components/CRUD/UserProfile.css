@@ -1,0 +1,10 @@
+.profile-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f0f5fb, rgba(240, 245, 251, 0.5) 30%, #f0f5fb), url("../Img/4849052.webp");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}

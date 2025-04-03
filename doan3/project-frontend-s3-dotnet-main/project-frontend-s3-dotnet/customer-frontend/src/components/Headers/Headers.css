@@ -1,0 +1,308 @@
+/* Wrapper tổng quan */
+.navbar-wrapper {
+  width: 100%;
+  height: 9vh;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Container nội dung */
+.navbar-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px;
+}
+
+/* Phần logo */
+.navbar-logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  padding-left: 0;
+}
+
+.logo-image {
+  height: 80%; 
+  max-width: 150px;
+  object-fit: contain; 
+  cursor: pointer; 
+  transition: transform 0.3s ease; 
+  margin-left: -25px;
+}
+
+.logo-image:hover {
+  transform: scale(1.1);
+}
+
+/* Link điều hướng */
+.navbar-links {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0 70px;
+  animation: slideIn 0.5s ease-out;
+}
+
+.navbar-item {
+    margin-right: 20px;
+    opacity: 0;
+    animation: fadeInLink 0.5s ease-out forwards;
+    animation-delay: 0.2s;
+    margin-left: 5px;
+}
+/* Hiệu ứng cho các liên kết */
+.navbar-item a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+  transition: transform 0.3s;
+  font-weight: 500;
+  position: relative;
+  font-family: sans-serif;
+}
+
+/* Gạch dưới xanh khi hover */
+.navbar-item a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #0056b3;
+  transition: width 0.3s ease-out;
+}
+
+.navbar-item a:hover {
+  transform: scale(1.1);
+  color: #004e92;
+}
+
+.navbar-item a:hover::after {
+  width: 100%;
+}
+
+/* Đánh dấu liên kết đang hoạt động */
+.navbar-item.active a {
+  color: #0056b3;
+}
+
+.navbar-item.active a::after {
+  width: 100%;
+}
+
+
+/* Vùng xác thực */
+.navbar-auth {
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  animation: fadeInLink 0.5s ease-out forwards;
+  animation-delay: 0.2s;
+  margin-left: 50px;
+}
+
+/* Tạo hiệu ứng cho phần user email */
+.navbar-user-email {
+  margin-right: 15px;
+  color: #4caf50;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navbar-user-email:hover {
+  color: #81c784;
+}
+
+/* Các liên kết đăng nhập và đăng ký */
+.navbar-login-link {
+  margin-right: -70px;
+  font-weight: bold;
+  transition: color 0.3s;
+  position: relative;
+  font-family: sans-serif;
+}
+
+/* Gạch dưới xanh khi hover */
+.navbar-login-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #0056b3;
+  transition: width 0.3s ease-out;
+}
+
+.navbar-login-link:hover {
+  color: #0056b3;
+}
+
+.navbar-login-link:hover::after {
+  width: 100%;
+}
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slideIn {
+  0% { transform: translateX(100%); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeInLink {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeInAuth {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Styles cho các liên kết đăng nhập và user icon */
+.navbar-login-icon {
+  border-radius: 20px;
+  border: 1px solid #004e92;
+  background-color: #004e92;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 8px 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  text-decoration: none;
+  margin-left: 12px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.navbar-login-icon:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  color:#ffffff;
+}
+
+.login-icon {
+  font-size: 16px;
+}
+
+.navbar-user-icon {
+  display: inline-flex;
+  align-items: center;
+  margin-left: -79px;
+  color: #0056b3;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+/* Thông báo */
+.navbar-bell {
+  position: relative;
+  margin: 0 10px;
+  cursor: pointer;
+  color: #0056b3;
+  font-size: 1.2rem;
+  margin-left: 22px;
+}
+
+.notification-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 2px 6px;
+}
+
+
+
+.navbar-search:hover .search-input,
+.navbar-search:focus-within .search-input {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+/* Responsive menu */
+.navbar-links {
+  display: flex;
+  gap: 30px;
+  /* margin-left: -100px; */
+}
+
+.navbar-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.menu-icon {
+  font-size: 24px;
+}
+
+@media (max-width: 789px) {
+  .navbar-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 63px;
+      background-color: white;
+      gap: 30px;
+    margin:0;
+    width: 28%;
+    text-align: center;
+    height: 250px;
+    margin-right: -442px;
+  }
+  .navbar-logo {
+    flex: 1;
+    justify-content: left;
+  }
+  .navbar-auth {
+    margin-left: 70px;
+  }
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .navbar-toggle {
+    display: block;
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 1000px){
+  .navbar-links {
+    gap: 27px;
+    margin: 0;
+    /* width: 126px; */
+    text-align: center;
+    /* height: 300px; */
+    margin-right: -320px;
+}
+
+}
+
+@media (min-width: 1000px){
+  .navbar-links {
+    margin:0 0 0 -45px;
+    
+}
+
+}
+
