@@ -1,0 +1,92 @@
+.add {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  width: 70%;
+  margin: 40px auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.add-title {
+  font-size: 30px;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: "Arial", sans-serif;
+}
+
+.add-form {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.add-form .ant-form-item {
+  margin-bottom: 25px;
+}
+
+.add-form input {
+  height: 45px;
+
+  padding: 0 15px;
+  font-family: "Arial", sans-serif;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.add-form input:focus {
+  border-color: #40a9ff;
+  box-shadow: 0 0 8px rgba(24, 144, 255, 0.2);
+  outline: none;
+}
+
+.submit-btn {
+  width: 100%;
+  background-color: #1890ff;
+  border-radius: 5px;
+  font-size: 16px;
+  height: 45px;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(90deg, #0056b3, #1477e0);
+  transform: translateY(-3px);
+}
+
+.submit-btn:active {
+  background: #0056b3;
+  transform: translateY(0);
+}
+
+.submit-btn:disabled {
+  background: #d9d9d9;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .add {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .add-title {
+    font-size: 22px;
+    letter-spacing: 0.8px;
+  }
+
+  .add-form input {
+    font-size: 14px;
+  }
+
+  .submit-btn {
+    font-size: 14px;
+    height: 40px;
+  }
+}

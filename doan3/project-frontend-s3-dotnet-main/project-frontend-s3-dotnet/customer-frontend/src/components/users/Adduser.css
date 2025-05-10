@@ -1,0 +1,80 @@
+.adduser {
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .adduser-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .adduser .form-group {
+    margin-bottom: 16px;
+  }
+
+  .adduser .form-group label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  .adduser .form-input, .addnews .form-password {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+    background-color: #f9f9f9;
+  }
+  
+  .adduser .form-input:focus, .addnews .form-password:focus {
+    border-color: #4CAF50;
+    outline: none;
+    background-color: #fff;
+  }
+
+  /* Button styling */
+  .adduser .submit-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+  }
+  
+  .adduser .submit-btn:hover {
+    background-color: #45a049;
+  }
+  
+  .adduser .submit-btn:active {
+    background-color: #388e3c;
+  }
+  
+  /* Make the form responsive */
+  @media (max-width: 768px) {
+    .adduser {
+      padding: 15px;
+    }
+  
+    .adduser .form-group {
+      margin-bottom: 12px;
+    }
+  
+    .adduser .submit-btn {
+      width: 100%;
+    }
+  }
+  

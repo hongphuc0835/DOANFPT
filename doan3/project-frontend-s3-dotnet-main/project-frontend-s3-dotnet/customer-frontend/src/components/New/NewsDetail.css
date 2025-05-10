@@ -1,0 +1,185 @@
+/* NewsDetail.css */
+
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(180deg, #f0f5fb, rgba(240, 245, 251, 0.5) 30%, #f0f5fb), url(http://localhost:3000/static/media/flat-lay-chat-bubbles-with-telephone-receiver-copy-space_23-2148796079.850841e….jpg);
+  color: #333;
+}
+
+/* Animation khi tải trang */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation slide-in cho các phần tử */
+@keyframes slideIn {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Animation shake khi có lỗi */
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Wrapper cho toàn bộ chi tiết tin tức */
+.news-detail-wrapper {
+  margin: 110px auto;
+  padding: 50px;
+  max-width: 1093px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  animation: fadeIn 1s ease-out; /* Thêm animation */
+}
+
+/* Tiêu đề của chi tiết tin tức */
+.news-detail-title {
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 16px;
+  color: #2c3e50;
+  opacity: 0;
+  animation: slideIn 0.6s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+/* Thông tin chi tiết tin tức (tác giả, ngày tháng, v.v.) */
+.news-detail-info {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+  animation-delay: 0.4s;
+}
+
+/* Nội dung chính của bài viết tin tức */
+.news-detail-content-text {
+  margin: 16px 0;
+  color: #555;
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+  animation-delay: 0.6s;
+}
+
+/* Kiểu chữ cho phần văn bản tin tức (in nghiêng) */
+.news-text {
+  font-style: italic;
+  color: #333;
+  padding: 8px;
+}
+
+/* Kiểu dáng cho ảnh tin tức */
+.news-detail-image {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Thông tin tác giả trong chi tiết tin tức */
+.author-info-news-detail {
+  font-style: italic;
+  font-size: 14px;
+  color: #7f8c8d;
+  margin-left: 212px;
+  margin-top: -13px;
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+  animation-delay: 0.8s;
+}
+
+/* Kiểu dáng cho nút quay lại */
+.back-button-news-detail {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.back-button-news-detail button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-button-news-detail button:hover {
+  background-color: #2980b9;
+  transform: scale(1.05); /* Phóng to nhẹ khi hover */
+}
+
+/* Thông báo khi đang tải, lỗi hoặc không có tin tức */
+.loading-news-detail,
+.error-news-detail,
+.no-news-detail {
+  text-align: center;
+  font-size: 18px;
+  color: #e74c3c;
+  margin-top: 20px;
+}
+
+.loading-news-detail {
+  animation: fadeIn 1s ease-out;
+}
+
+/* Animation shake khi có lỗi */
+.error-news-detail {
+  animation: shake 0.5s ease-out; /* Thêm hiệu ứng shake */
+}
+
+/* Kiểu dáng cho liên kết quay lại */
+.back-link-news-detail {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 8px;
+  border-top: 1px solid #ddd;
+}
+
+.back-link-news-detail a {
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.2s ease;
+  font-size: 17px;
+  font-family: "Arial", sans-serif;
+}
+
+.back-link-news-detail a:hover {
+  color: #2980b9;
+  transform: translateX(5px); /* Di chuyển nhẹ khi hover */
+}

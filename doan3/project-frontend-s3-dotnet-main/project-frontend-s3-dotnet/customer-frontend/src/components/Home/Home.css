@@ -1,0 +1,14 @@
+.destination-item {
+  font-weight: bold;
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 8px; /* Bo góc mềm mại */
+  margin: 5px 0;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s; /* Hiệu ứng chuyển động */
+}
+
+.destination-item:active {
+  transform: scale(0.98); /* Thu nhỏ khi nhấn */
+}

@@ -1,0 +1,249 @@
+/* main-content tổng quan */
+.user-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    transition: all 0.3s ease-in-out;
+  }
+
+
+  /* Header của main-content */
+
+  /* Điều khiển tìm kiếm và sắp xếp */
+  .user-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .user-controls input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    flex: 1;
+    margin-right: 10px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .user-controls input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+  }
+    
+  /* Danh sách người dùng */
+
+.user-list h3 {
+  font-size: 22px;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-align: center;
+  border-bottom: 3px solid #3498db;
+  padding-bottom: 10px;
+}
+
+/* Bảng người dùng */
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.user-table thead {
+  background-color: #ecf0f1;
+  color: #34495e;
+}
+
+.user-table thead th {
+  text-align: left;
+  padding: 12px;
+  font-weight: bold;
+  border-bottom: 2px solid #ddd;
+}
+
+.user-table tbody td {
+  padding: 12px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.user-table tbody tr:hover {
+  background-color: #f9f9f9;
+  transition: background-color 0.3s ease;
+}
+
+/* Cột hành động */
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* Nút chỉnh sửa và xóa */
+.edit-btn,
+.delete-btn {
+  padding: 5px 12px;
+  font-size: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.edit-btn {
+  background-color: #3498db;
+  color: white;
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #2980b9;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .user-table {
+    font-size: 12px;
+  }
+  .edit-btn,
+  .delete-btn {
+    padding: 5px 8px;
+  }
+}
+
+  /* Overlay nền mờ */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6); /* Nền tối hơn */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px); /* Hiệu ứng mờ nền */
+}
+
+/* Modal chính */
+.edit-modal {
+  background: #ffffff; /* Màu trắng nổi bật */
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  width: 400px;
+  max-width: 90%;
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Hiệu ứng scale-in */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Tiêu đề */
+.modal-header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  justify-content: space-between;
+}
+
+/* Form nhóm */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 0.9rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Nút trong modal */
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.save-btn {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.save-btn:hover {
+  background-color: #45a049;
+}
+
+.cancel-btn {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cancel-btn:hover {
+  background-color: #e53935;
+}
+
+/* Độ rộng màn hình nhỏ */
+@media (max-width: 500px) {
+  .edit-modal {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .form-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+}

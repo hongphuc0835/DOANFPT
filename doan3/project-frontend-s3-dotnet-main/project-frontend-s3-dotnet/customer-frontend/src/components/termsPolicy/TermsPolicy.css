@@ -1,0 +1,152 @@
+.title-head{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0 0 10px;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    margin-top: 30px;
+}
+
+.backtop.show {
+    opacity: 1;
+}
+.backtop {
+    position: fixed;
+    bottom: 40px;
+    right: 10px;
+    background: #0056b3;
+    height: 44px;
+    width: 44px;
+    text-align: center;
+    border-radius: 30px;
+    z-index: 99;
+    top: initial !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.page {
+  padding: 30px 0;
+}
+
+.page-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.page-title .title-head h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #007bff;
+  margin: 0;
+}
+
+.content-page p {
+  margin-bottom: 15px;
+}
+
+.backtop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: #007bff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.backtop:hover {
+  background-color: #0056b3;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.backtop svg {
+  width: 20px;
+  height: 20px;
+}
+/* Page title animation */
+.page-title .title-head h2 {
+  animation: slideIn 1.2s ease-in-out;
+}
+
+/* Content box fade-in effect */
+.content-page {
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* Back to top button animation */
+.backtop {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s ease-in-out;
+}
+
+.backtop.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.backtop:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.title-head1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 27px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    position: relative;
+    padding: 10px;
+    background: #0056b3; 
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: all 0.3s ease;
+  }
+  
