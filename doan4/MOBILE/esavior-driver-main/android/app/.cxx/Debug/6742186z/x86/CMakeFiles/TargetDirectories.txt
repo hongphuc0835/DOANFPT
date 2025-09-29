@@ -1,0 +1,2 @@
+D:/bes4/esavior-driver-main/android/app/.cxx/Debug/6742186z/x86/CMakeFiles/edit_cache.dir
+D:/bes4/esavior-driver-main/android/app/.cxx/Debug/6742186z/x86/CMakeFiles/rebuild_cache.dir
